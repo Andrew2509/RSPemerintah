@@ -1,0 +1,328 @@
+/* Header and Sidebar Custom Styles - No Tailwind Dependency */
+
+/* ==================== HEADER ==================== */
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-logo {
+    width: 32px;
+    height: 32px;
+    background-color: #2563eb;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.header-title-section h1 {
+    font-weight: 600;
+    color: #111827;
+    font-size: 16px;
+    margin: 0;
+}
+
+.header-title-section p {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-search-wrapper {
+    position: relative;
+}
+
+.header-search-input {
+    padding: 8px 16px 8px 40px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    width: 320px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.header-search-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.header-search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: #9ca3af;
+    pointer-events: none;
+}
+
+.header-notification-btn {
+    padding: 8px;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.header-notification-btn:hover {
+    background-color: #f3f4f6;
+}
+
+.header-notification-icon {
+    width: 24px;
+    height: 24px;
+    color: #4b5563;
+}
+
+.header-notification-dot {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: #ef4444;
+    border-radius: 50%;
+}
+
+.header-user-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-user-info {
+    font-size: 14px;
+}
+
+.header-user-name {
+    font-weight: 500;
+    color: #111827;
+    margin: 0;
+}
+
+.header-user-role {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* ==================== SIDEBAR ==================== */
+.app-sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 256px;
+    height: calc(100vh - 60px);
+    background: white;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid #e5e7eb;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.sidebar-nav {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.sidebar-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #374151;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+.sidebar-nav-link:hover {
+    background-color: #f3f4f6;
+}
+
+.sidebar-nav-link.active {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.sidebar-nav-link.active .sidebar-nav-icon {
+    color: white;
+}
+
+.sidebar-nav-icon {
+    width: 20px;
+    height: 20px;
+    color: #6b7280;
+    transition: color 0.2s ease;
+}
+
+.sidebar-nav-link.active .sidebar-nav-icon {
+    color: white;
+}
+
+.sidebar-nav-link:hover .sidebar-nav-icon {
+    color: #2563eb;
+}
+
+.sidebar-nav-link.active:hover .sidebar-nav-icon {
+    color: white;
+}
+
+.sidebar-nav-text {
+    font-weight: 500;
+}
+
+.sidebar-nav-link.active .sidebar-nav-text {
+    font-weight: 600;
+}
+
+.sidebar-section-title {
+    padding: 16px 16px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Layout adjustments */
+.app-body {
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 0;
+}
+
+.app-main-content {
+    margin-left: 256px;
+    margin-top: 60px;
+    min-height: calc(100vh - 60px);
+    padding: 0;
+}
+
+/* Help Button */
+.help-button-wrapper {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+}
+
+.help-button {
+    padding: 16px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.help-button:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.help-button-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 8px 16px;
+        height: 60px;
+    }
+    
+    .header-search-input {
+        width: 200px;
+    }
+    
+    .header-user-info {
+        display: none;
+    }
+    
+    .app-sidebar {
+        width: 200px;
+    }
+    
+    .app-main-content {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-search-wrapper {
+        display: none;
+    }
+    
+    .app-sidebar {
+        width: 180px;
+    }
+    
+    .app-main-content {
+        margin-left: 180px;
+    }
+    
+    .sidebar-nav-link {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}
+

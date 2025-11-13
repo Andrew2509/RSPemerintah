@@ -1,0 +1,323 @@
+/* Patient Edit Custom Styles - No Tailwind Dependency */
+
+.patient-edit-container {
+    padding: 24px;
+}
+
+.patient-edit-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.patient-edit-header {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.patient-edit-header-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.patient-edit-header-info p {
+    color: #4b5563;
+    font-size: 16px;
+}
+
+.patient-edit-header-info p span {
+    font-weight: 600;
+}
+
+.patient-edit-header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-detail,
+.btn-back {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-block;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    background: white;
+}
+
+.btn-detail:hover,
+.btn-back:hover {
+    background-color: #f9fafb;
+}
+
+/* Alert Messages */
+.alert-message {
+    margin-bottom: 24px;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.alert-message.success {
+    background-color: #d1fae5;
+    border: 1px solid #10b981;
+    color: #065f46;
+}
+
+.alert-message.error {
+    background-color: #fee2e2;
+    border: 1px solid #ef4444;
+    color: #991b1b;
+}
+
+/* Form Styles */
+.patient-edit-form {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Form Section */
+.patient-edit-section {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 24px;
+}
+
+.patient-edit-section:last-child {
+    border-bottom: none;
+}
+
+.patient-edit-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 16px;
+}
+
+/* Form Grid */
+.patient-edit-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .patient-edit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .patient-edit-grid.three-col {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.patient-edit-grid-full {
+    grid-column: 1 / -1;
+}
+
+/* Form Group */
+.patient-edit-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-edit-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.patient-edit-label .required {
+    color: #ef4444;
+}
+
+.patient-edit-input,
+.patient-edit-select,
+.patient-edit-textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.patient-edit-input:focus,
+.patient-edit-select:focus,
+.patient-edit-textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.patient-edit-input:disabled {
+    background-color: #f3f4f6;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+.patient-edit-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.patient-edit-help-text {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.patient-edit-error {
+    font-size: 12px;
+    color: #ef4444;
+    margin-top: 4px;
+}
+
+/* Category Specific Sections */
+.patient-edit-category-section {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.patient-edit-category-section.bpjs {
+    background-color: #eff6ff;
+}
+
+.patient-edit-category-section.asuransi {
+    background-color: #f0fdf4;
+}
+
+.patient-edit-category-section.sisrute {
+    background-color: #fff7ed;
+}
+
+.patient-edit-category-section.telemedis {
+    background-color: #eef2ff;
+}
+
+.patient-edit-category-section.program {
+    background-color: #faf5ff;
+}
+
+.patient-edit-category-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .patient-edit-category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .patient-edit-category-grid.two-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.patient-edit-category-grid-full {
+    grid-column: 1 / -1;
+}
+
+/* Medical Info Section */
+.patient-edit-medical-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+/* Form Actions */
+.patient-edit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.btn-cancel,
+.btn-submit {
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-cancel {
+    border: 1px solid #d1d5db;
+    color: #374151;
+    background: white;
+}
+
+.btn-cancel:hover {
+    background-color: #f9fafb;
+}
+
+.btn-submit {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .patient-edit-container {
+        padding: 16px;
+    }
+    
+    .patient-edit-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .patient-edit-header-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .btn-detail,
+    .btn-back {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .patient-edit-form {
+        padding: 16px;
+    }
+    
+    .patient-edit-actions {
+        flex-direction: column;
+    }
+    
+    .btn-cancel,
+    .btn-submit {
+        width: 100%;
+        text-align: center;
+    }
+}
+

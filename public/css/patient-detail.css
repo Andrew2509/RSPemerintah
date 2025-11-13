@@ -1,0 +1,283 @@
+/* Patient Detail Custom Styles - No Tailwind Dependency */
+
+.patient-detail-container {
+    padding: 24px;
+}
+
+.patient-detail-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.patient-detail-header {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.patient-detail-header-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.patient-detail-header-info p {
+    color: #4b5563;
+    font-size: 16px;
+}
+
+.patient-detail-header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-back,
+.btn-edit {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.btn-back {
+    border: 1px solid #d1d5db;
+    color: #374151;
+    background: white;
+}
+
+.btn-back:hover {
+    background-color: #f9fafb;
+}
+
+.btn-edit {
+    background-color: #10b981;
+    color: white;
+    border: none;
+}
+
+.btn-edit:hover {
+    background-color: #059669;
+}
+
+/* Main Card */
+.patient-detail-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Section Styles */
+.patient-detail-section {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 24px;
+}
+
+.patient-detail-section:last-child {
+    border-bottom: none;
+}
+
+.patient-detail-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 16px;
+}
+
+/* Info Grid */
+.patient-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .patient-detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.patient-detail-grid-full {
+    grid-column: 1 / -1;
+}
+
+/* Info Item */
+.patient-detail-info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-detail-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.patient-detail-value {
+    font-size: 16px;
+    color: #111827;
+}
+
+.patient-detail-value-bold {
+    font-weight: 600;
+}
+
+/* Status Badge */
+.patient-detail-status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 9999px;
+}
+
+.patient-detail-status-badge.active {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.patient-detail-status-badge.inactive {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.patient-detail-status-badge.deceased {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Category Specific Sections */
+.patient-detail-category-section {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.patient-detail-category-section.bpjs {
+    background-color: #eff6ff;
+}
+
+.patient-detail-category-section.asuransi {
+    background-color: #f0fdf4;
+}
+
+.patient-detail-category-section.sisrute {
+    background-color: #fff7ed;
+}
+
+.patient-detail-category-section.telemedis {
+    background-color: #eef2ff;
+}
+
+.patient-detail-category-section.program {
+    background-color: #faf5ff;
+}
+
+.patient-detail-category-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .patient-detail-category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .patient-detail-category-grid.two-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.patient-detail-category-grid-full {
+    grid-column: 1 / -1;
+}
+
+/* Medical Info Section */
+.patient-detail-medical-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.patient-detail-medical-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Metadata Section */
+.patient-detail-metadata {
+    padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.patient-detail-metadata-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .patient-detail-metadata-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.patient-detail-metadata-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-detail-metadata-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.patient-detail-metadata-value {
+    font-size: 16px;
+    color: #111827;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .patient-detail-container {
+        padding: 16px;
+    }
+    
+    .patient-detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .patient-detail-header-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .btn-back,
+    .btn-edit {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .patient-detail-card {
+        padding: 16px;
+    }
+}
+

@@ -1,0 +1,261 @@
+/* Patient Registration Custom Styles - No Tailwind Dependency */
+
+.patient-registration-container {
+    padding: 24px;
+}
+
+.patient-registration-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.patient-registration-header {
+    margin-bottom: 24px;
+}
+
+.patient-registration-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.patient-registration-header p {
+    color: #4b5563;
+    font-size: 16px;
+}
+
+/* Alert Messages */
+.alert-message {
+    margin-bottom: 24px;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.alert-message.success {
+    background-color: #d1fae5;
+    border: 1px solid #10b981;
+    color: #065f46;
+}
+
+.alert-message.error {
+    background-color: #fee2e2;
+    border: 1px solid #ef4444;
+    color: #991b1b;
+}
+
+/* Form Styles */
+.patient-registration-form {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Form Section */
+.patient-registration-section {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 24px;
+}
+
+.patient-registration-section:last-child {
+    border-bottom: none;
+}
+
+.patient-registration-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 16px;
+}
+
+/* Form Grid */
+.patient-registration-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .patient-registration-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.patient-registration-grid-full {
+    grid-column: 1 / -1;
+}
+
+/* Form Group */
+.patient-registration-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-registration-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.patient-registration-label .required {
+    color: #ef4444;
+}
+
+.patient-registration-input,
+.patient-registration-select,
+.patient-registration-textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.patient-registration-input:focus,
+.patient-registration-select:focus,
+.patient-registration-textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.patient-registration-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.patient-registration-error {
+    font-size: 12px;
+    color: #ef4444;
+    margin-top: 4px;
+}
+
+/* Category Specific Sections */
+.patient-registration-category-section {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.patient-registration-category-section.bpjs {
+    background-color: #eff6ff;
+}
+
+.patient-registration-category-section.asuransi {
+    background-color: #f0fdf4;
+}
+
+.patient-registration-category-section.sisrute {
+    background-color: #fff7ed;
+}
+
+.patient-registration-category-section.telemedis {
+    background-color: #eef2ff;
+}
+
+.patient-registration-category-section.program {
+    background-color: #faf5ff;
+}
+
+.patient-registration-category-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .patient-registration-category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .patient-registration-category-grid.two-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.patient-registration-category-grid-full {
+    grid-column: 1 / -1;
+}
+
+/* Medical Info Section */
+.patient-registration-medical-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+/* Form Actions */
+.patient-registration-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.btn-reset,
+.btn-submit {
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-reset {
+    border: 1px solid #d1d5db;
+    color: #374151;
+    background: white;
+}
+
+.btn-reset:hover {
+    background-color: #f9fafb;
+}
+
+.btn-submit {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .patient-registration-container {
+        padding: 16px;
+    }
+    
+    .patient-registration-header h2 {
+        font-size: 20px;
+    }
+    
+    .patient-registration-form {
+        padding: 16px;
+    }
+    
+    .patient-registration-actions {
+        flex-direction: column;
+    }
+    
+    .btn-reset,
+    .btn-submit {
+        width: 100%;
+        text-align: center;
+    }
+}
+
