@@ -1,59 +1,229 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# RSPemerintah - Sistem Manajemen Rumah Sakit Pemerintah
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistem manajemen rumah sakit berbasis web yang dibangun dengan Laravel 12 dan Livewire 3 untuk mengelola registrasi pasien, triage, dan informasi pasien.
 
-## About Laravel
+## 🚀 Fitur
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Registrasi Pasien** - Pendaftaran pasien baru dengan informasi lengkap
+- **Manajemen Pasien** - Daftar, detail, dan edit informasi pasien
+- **Sistem Triage** - Klasifikasi pasien berdasarkan ESI Level dan prioritas
+- **QR Wristband Scanner** - Scan QR code pada gelang pasien untuk akses cepat
+- **Dashboard** - Overview sistem dan statistik
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🛠️ Teknologi
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Laravel 12** - PHP Framework
+- **Livewire 3** - Full-stack framework untuk Laravel
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **SQLite** - Database (dapat diganti dengan MySQL/PostgreSQL)
 
-## Learning Laravel
+## 📥 Cara Mengambil Data dari GitHub
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### Prasyarat
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Pastikan Anda sudah menginstall:
+- **PHP** >= 8.2
+- **Composer** - Dependency manager untuk PHP
+- **Node.js** dan **npm** - Untuk asset management
+- **Git** - Version control system
 
-## Laravel Sponsors
+### Langkah-langkah Instalasi
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+#### 1. Clone Repository dari GitHub
 
-### Premium Partners
+Buka terminal/command prompt dan jalankan perintah berikut:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+```bash
+git clone https://github.com/Andrew2509/RSPemerintah.git
+```
 
-## Contributing
+Atau jika Anda ingin clone ke direktori tertentu:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+git clone https://github.com/Andrew2509/RSPemerintah.git nama-folder
+```
 
-## Code of Conduct
+#### 2. Masuk ke Direktori Proyek
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+cd RSPemerintah
+```
 
-## Security Vulnerabilities
+#### 3. Install Dependencies PHP
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+composer install
+```
 
-## License
+#### 4. Install Dependencies JavaScript
+
+```bash
+npm install
+```
+
+#### 5. Setup Environment File
+
+Salin file `.env.example` menjadi `.env`:
+
+**Windows:**
+```bash
+copy .env.example .env
+```
+
+**Linux/Mac:**
+```bash
+cp .env.example .env
+```
+
+#### 6. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+#### 7. Setup Database
+
+Edit file `.env` dan sesuaikan konfigurasi database:
+
+```env
+DB_CONNECTION=sqlite
+# atau untuk MySQL:
+# DB_CONNECTION=mysql
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_DATABASE=rs_pemerintah
+# DB_USERNAME=root
+# DB_PASSWORD=
+```
+
+Jika menggunakan SQLite, pastikan file `database/database.sqlite` sudah ada. Jika belum, buat dengan:
+
+**Windows:**
+```bash
+type nul > database/database.sqlite
+```
+
+**Linux/Mac:**
+```bash
+touch database/database.sqlite
+```
+
+#### 8. Jalankan Migration
+
+```bash
+php artisan migrate
+```
+
+#### 9. Build Assets
+
+```bash
+npm run build
+```
+
+Atau untuk development dengan hot reload:
+
+```bash
+npm run dev
+```
+
+#### 10. Jalankan Server Development
+
+```bash
+php artisan serve
+```
+
+Aplikasi akan berjalan di `http://localhost:8000`
+
+### Update dari GitHub (Jika Sudah Ada Lokal)
+
+Jika Anda sudah pernah clone sebelumnya dan ingin mengambil update terbaru:
+
+```bash
+# Masuk ke direktori proyek
+cd RSPemerintah
+
+# Ambil perubahan terbaru dari GitHub
+git pull origin main
+
+# Install dependencies baru (jika ada)
+composer install
+npm install
+
+# Jalankan migration baru (jika ada)
+php artisan migrate
+
+# Rebuild assets
+npm run build
+```
+
+### Menggunakan Composer Scripts
+
+Proyek ini sudah dilengkapi dengan script otomatis untuk setup:
+
+```bash
+composer setup
+```
+
+Script ini akan otomatis:
+- Install composer dependencies
+- Copy `.env.example` ke `.env` (jika belum ada)
+- Generate application key
+- Run migrations
+- Install npm dependencies
+- Build assets
+
+## 📝 Struktur Proyek
+
+```
+RSPemerintah/
+├── app/
+│   ├── Enums/          # Enum untuk kategori, tipe layanan, triage
+│   ├── Http/
+│   │   └── Controllers/
+│   ├── Livewire/       # Komponen Livewire
+│   └── Models/         # Model Eloquent
+├── database/
+│   ├── migrations/     # Database migrations
+│   └── seeders/       # Database seeders
+├── public/
+│   └── css/           # File CSS custom
+├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/         # Blade templates
+└── routes/
+    └── web.php        # Web routes
+```
+
+## 🔧 Development
+
+Untuk development dengan hot reload dan monitoring:
+
+```bash
+composer dev
+```
+
+Ini akan menjalankan:
+- Laravel development server
+- Queue worker
+- Log viewer (Pail)
+- Vite dev server
+
+## 📄 License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## 👤 Author
+
+**Andrew2509**
+
+- GitHub: [@Andrew2509](https://github.com/Andrew2509)
+- Repository: [RSPemerintah](https://github.com/Andrew2509/RSPemerintah)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Andrew2509/RSPemerintah/issues).
+
+---
+
+**Catatan:** Pastikan semua prasyarat sudah terinstall sebelum menjalankan aplikasi. Jika mengalami masalah, pastikan versi PHP >= 8.2 dan semua dependencies sudah terinstall dengan benar.
